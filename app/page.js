@@ -1,11 +1,12 @@
-import Image from "next/image";
 import Navbar from "./components/Navbar";
+import ProductCategory from "./components/ProductCategory";
+import Slider from "./components/slider/Slider";
 
 export default function Home() {
   return (
     <main>
-      <Navbar/>
-      <div>Hello world</div>
+      <Slider/>
+      <ProductCategory/>
     </main>
   );
 }
