@@ -42,20 +42,20 @@ const Trending = () => {
         ))}
       </div>
 
-      <div className="h-24 shadow-md flex gap-x-20  justify-center  items-center">
-        <div className="border-r px-8">
+      <div className="h-24 shadow-2xl flex gap-x-20  justify-center  items-center">
+        <div className="border-r pr-12 pl-10">
             <p>Free Delivery</p>
             <p>From $78</p>
         </div>
-        <div className="border-r px-8">
+        <div className="border-r pr-12 pl-10">
             <p>Free Delivery</p>
             <p>From $78</p>
         </div>
-        <div className="border-r px-8">
+        <div className="border-r pr-12 pl-10">
             <p>Free Delivery</p>
             <p>From $78</p>
         </div>
-        <div className="border-r px-8">
+        <div className="border-r pr-12 pl-10">
             <p>Free Delivery</p>
             <p>From $78</p>
         </div>
@@ -63,6 +63,10 @@ const Trending = () => {
             <p>Free Delivery</p>
             <p>From $78</p>
         </div>
+      </div>
+
+      <div className="flex justify-center my-14">
+        <img src="https://demo.xpeedstudio.com/marketov2/grocery/wp-content/uploads/sites/12/2018/10/ad-min.png" alt="" />
       </div>
     </div>
   );
