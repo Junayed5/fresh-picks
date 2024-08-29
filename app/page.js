@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
-import ProductCategory from "./components/ProductCategory";
+import ProductCategory from "./components/homeItems/ProductCategory";
+import Trending from "./components/homeItems/Trending";
 import Slider from "./components/slider/Slider";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <main>
       <Slider/>
       <ProductCategory/>
+      <Trending/>
     </main>
   );
 }
