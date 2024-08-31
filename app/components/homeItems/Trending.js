@@ -42,7 +42,7 @@ const Trending = () => {
         ))}
       </div>
 
-      <div className="h-24 shadow-2xl flex gap-x-20  justify-center  items-center">
+      <div className="h-full md:h-24 shadow-2xl flex-none md:flex gap-x-20  justify-center  items-center">
         <div className="border-r pr-12 pl-10">
             <p>Free Delivery</p>
             <p>From $78</p>
