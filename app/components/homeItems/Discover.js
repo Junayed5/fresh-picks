@@ -172,30 +172,30 @@ const Discover = () => {
         </div>
       </div>
       <hr />
-      <div className="flex justify-center gap-x-10 py-5">
+      <div className="flex justify-center gap-32 py-20">
         <img
-          className="size-40"
-          src="https://cdn.prod.website-files.com/6312535109af3402143e250c/6312535109af345c4c3e251b_apple_-%20logo-300x119.png"
+          className=""
+          src="https://demo.xpeedstudio.com/marketov2/grocery/wp-content/uploads/sites/12/2018/04/sponsors_1.png"
           alt=""
         />
         <img
-          className="size-40"
-          src="https://cdn.prod.website-files.com/6312535109af3402143e250c/6312535109af34a9603e2694_mercedes-benz_-%20logo-300x303.png"
+          className=""
+          src="https://demo.xpeedstudio.com/marketov2/grocery/wp-content/uploads/sites/12/2018/04/sponsors_2.png"
           alt=""
         />
         <img
-          className="size-40"
-          src="https://cdn.prod.website-files.com/6312535109af3402143e250c/6312535109af3425413e251d_audi_-%20logo-300x119.png"
+          className=""
+          src="https://demo.xpeedstudio.com/marketov2/grocery/wp-content/uploads/sites/12/2018/04/sponsors_3.png"
           alt=""
         />
         <img
-          className="size-40"
-          src="https://cdn.prod.website-files.com/6312535109af3402143e250c/6312535109af3413cc3e2516_adidas_-%20logo-300x119.png"
+          className=""
+          src="https://demo.xpeedstudio.com/marketov2/grocery/wp-content/uploads/sites/12/2018/04/sponsors_4.png"
           alt=""
         />
         <img
-          className="size-40"
-          src="https://cdn.prod.website-files.com/6312535109af3402143e250c/6312535109af34637b3e25fd_disney_-%20logo-300x82.png"
+          className=""
+          src="https://demo.xpeedstudio.com/marketov2/grocery/wp-content/uploads/sites/12/2018/04/sponsors_4.png"
           alt=" "
         />
       </div>
