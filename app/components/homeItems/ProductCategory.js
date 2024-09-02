@@ -35,7 +35,7 @@ export default function ProductCategory() {
   ];
   return (
     <div className="max-w-[100rem] mx-auto mt-20">
-      <div className="border  grid grid-cols-2 md:grid-cols-6">
+      <div className="border grid grid-cols-2 md:grid-cols-6">
         <div className="border-r h-28 my-9 flex justify-center items-center">
           <div>
             <img
