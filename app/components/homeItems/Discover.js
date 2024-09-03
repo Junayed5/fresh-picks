@@ -55,6 +55,19 @@ const Discover = () => {
   return (
     <>
       <div className="max-w-7xl mx-auto">
+        <div className="flex-row md:flex md:justify-between border-b pb-2">
+          <div>
+            <h3 className="text-center text-xl font-semibold">
+              Discover More
+            </h3>
+          </div>
+          <div className="text-gray-500 font-semibold text-lg flex justify-center gap-x-3">
+            <p>On Sell</p>
+            <p>Hot Sell</p>
+            <p>Trend</p>
+            <p>Best Sell</p>
+          </div>
+        </div>
         <Swiper
           pagination={{
             dynamicBullets: true,
@@ -172,7 +185,7 @@ const Discover = () => {
         </div>
       </div>
       <hr />
-      <div className="flex justify-center gap-32 py-20">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-32 py-20">
         <img
           className=""
           src="https://demo.xpeedstudio.com/marketov2/grocery/wp-content/uploads/sites/12/2018/04/sponsors_1.png"
@@ -199,14 +212,25 @@ const Discover = () => {
           alt=" "
         />
       </div>
-      <div className="h-64 bg-primary flex justify-center items-center gap-x-40">
+      <div className="h-64 bg-primary flex-none md:flex md:justify-center items-center gap-x-40 py-16">
         <div>
-          <h3 className="text-2xl font-semibold text-white">Newsletter & Get Updates </h3>
-          <p className="text-sm text-white">Sign up for our newsletter to get up-to-date from us</p>
+          <h3 className="text-center text-2xl font-semibold text-white">
+            Newsletter & Get Updates{" "}
+          </h3>
+          <p className="text-center text-sm text-white">
+            Sign up for our newsletter to get up-to-date from us
+          </p>
         </div>
-        <div>
-          <input className="h-12 w-[415px] pl-7" type="text" placeholder="Enter Your Email"/>
-          <input className="h-12 bg-secondary hover:bg-secondaryLite text-white px-9 rounded-r-sm" type="submit"  />
+        <div className="mt-5 md:mt-0 flex justify-center">
+          <input
+            className="h-12 w-60 md:w-[415px] pl-7"
+            type="text"
+            placeholder="Enter Your Email"
+          />
+          <input
+            className="h-12 bg-secondary hover:bg-secondaryLite text-white px-9 rounded-r-sm"
+            type="submit"
+          />
         </div>
       </div>
     </>

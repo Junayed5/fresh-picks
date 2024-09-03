@@ -18,7 +18,7 @@ export default function Navbar() {
   };
   return (
     <>
-      <div className="bg-primary">
+      <div className="hidden md:block bg-primary">
         <div className="flex justify-between text-white py-3 max-w-7xl mx-auto">
           <div className="flex gap-x-4">
             <div>
@@ -54,7 +54,7 @@ export default function Navbar() {
             {/* Logo */}
             <div className="flex items-center py-5 px-2">
               <a href="#" className="flex items-center text-gray-700">
-                <img src="fresh-picks.png" alt="" />
+                <img className="h-12 md:h-16" src="fresh-picks.png" alt="" />
               </a>
             </div>
 
@@ -79,6 +79,8 @@ export default function Navbar() {
 
             {/* Mobile menu button */}
             <div className="md:hidden flex items-center">
+              <button className="pr-3">Login</button>
+
               <button className="mobile-menu-button" onClick={toggleMenu}>
                 <svg
                   className="w-6 h-6"
@@ -127,29 +129,31 @@ export default function Navbar() {
             Cart
           </a>
         </div>
-        <div className="flex justify-between items-center max-w-7xl mx-auto">
-          <button className="bg-primary text-2xl text-white px-16 py-2">
-            All Category
-          </button>
+        <div className="hidden md:block">
+          <div className="flex justify-between items-center max-w-7xl mx-auto">
+            <button className="bg-primary text-2xl text-white px-16 py-2">
+              All Category
+            </button>
 
-          <div>
-            <a href="#" className="py-2 px-4 text-lg hover:bg-gray-200">
-              Home
-            </a>
-            <a href="#" className="py-2 px-4 text-lg hover:bg-gray-200">
-              About
-            </a>
-            <a href="#" className="py-2 px-4 text-lg hover:bg-gray-200">
-              Services
-            </a>
-            <a href="#" className="py-2 px-4 text-lg hover:bg-gray-200">
-              Contact
-            </a>
+            <div>
+              <a href="#" className="py-2 px-4 text-lg hover:bg-gray-200">
+                Home
+              </a>
+              <a href="#" className="py-2 px-4 text-lg hover:bg-gray-200">
+                About
+              </a>
+              <a href="#" className="py-2 px-4 text-lg hover:bg-gray-200">
+                Services
+              </a>
+              <a href="#" className="py-2 px-4 text-lg hover:bg-gray-200">
+                Contact
+              </a>
+            </div>
+            <button className="bg-secondary text-2xl text-white px-16 py-2">
+              <span className="">Black Friday</span> <br />
+              <span className="text-sm">Get 45% Off</span>
+            </button>
           </div>
-          <button className="bg-secondary text-2xl text-white px-16 py-2">
-            <span className="">Black Friday</span> <br />
-            <span className="text-sm">Get 45% Off</span>
-          </button>
         </div>
       </nav>
     </>

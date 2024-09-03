@@ -44,7 +44,7 @@ const Trending = () => {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 pt-5">
           {products.map(({ name, image, discountPrice, mainPrice }) => (
-            <div className="border w-fit px-7 py-3">
+            <div className="border px-7 py-3">
               <img className=" mx-auto mb-7" src={image} alt="" />
               <p className="font-semibold w-48 mb-1">{name}</p>
               <div className="flex gap-x-5 text-base font-semibold">
