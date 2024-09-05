@@ -179,8 +179,116 @@ const page = ({ params }) => {
               <FaStar />
               <FaStar />
             </div>
-            <p className="font-semibold text-center">Average Start Rating: <span className="italic text-orange-400">4.3 out of 5</span> <span>(3 vote)</span></p>
+            <p className="font-semibold text-center">
+              Average Start Rating:{" "}
+              <span className="italic text-orange-400">4.3 out of 5</span>{" "}
+              <span>(3 vote)</span>
+            </p>
           </div>
+        </div>
+
+        <div className="">
+          <h3 className="font-semibold text-xl w-3/4 mx-auto py-3">
+            3 reviews for product name
+          </h3>
+
+          <div className="w-3/5 mx-auto">
+            <div className="flex gap-8 my-5">
+              <div>
+                <img
+                  className="size-10 border-4"
+                  src="https://secure.gravatar.com/avatar/7a6df00789e50714fcde1b759befcc84?s=60&d=mm&r=g"
+                  alt=""
+                />
+              </div>
+              <div className="border rounded-md px-7 py-3">
+                <div className="flex items-center gap-2 ">
+                  <div className="flex text-primary py-5">
+                    <FaStar />
+                    <FaRegStar />
+                    <FaRegStar />
+                    <FaRegStar />
+                    <FaRegStar />
+                  </div>
+                  <div className="flex items-center gap-1 text-[#767676] text-xs font-semibold">
+                    <p>User Name</p>-<p>June 7, 2024</p>
+                  </div>
+                </div>
+
+                <div>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora, sunt.
+                </div>
+              </div>
+            </div>
+            <div className="flex gap-8 my-5">
+              <div>
+                <img
+                  className="size-10 border-4"
+                  src="https://secure.gravatar.com/avatar/7a6df00789e50714fcde1b759befcc84?s=60&d=mm&r=g"
+                  alt=""
+                />
+              </div>
+              <div className="border rounded-md px-7 py-3">
+                <div className="flex items-center gap-2 ">
+                  <div className="flex text-primary py-5">
+                    <FaStar />
+                    <FaRegStar />
+                    <FaRegStar />
+                    <FaRegStar />
+                    <FaRegStar />
+                  </div>
+                  <div className="flex items-center gap-1 text-[#767676] text-xs font-semibold">
+                    <p>User Name</p>-<p>June 7, 2024</p>
+                  </div>
+                </div>
+
+                <div>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora, sunt.
+                </div>
+              </div>
+            </div>
+            <div className="flex gap-8 my-5">
+              <div>
+                <img
+                  className="size-10 border-4"
+                  src="https://secure.gravatar.com/avatar/7a6df00789e50714fcde1b759befcc84?s=60&d=mm&r=g"
+                  alt=""
+                />
+              </div>
+              <div className="border rounded-md px-7 py-3">
+                <div className="flex items-center gap-2 ">
+                  <div className="flex text-primary py-5">
+                    <FaStar />
+                    <FaRegStar />
+                    <FaRegStar />
+                    <FaRegStar />
+                    <FaRegStar />
+                  </div>
+                  <div className="flex items-center gap-1 text-[#767676] text-xs font-semibold">
+                    <p>User Name</p>-<p>June 7, 2024</p>
+                  </div>
+                </div>
+
+                <div>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora, sunt.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto border rounded-md my-10">
+        <h3 className="text-xl font-semibold text-primary bg-gray-200 px-3 py-3">Question About this product</h3>
+
+
+        <div className="px-5 py-3">
+          <form className="w-full mx-auto my-5" action="">
+            <input className="h-10 w-4/5 border rounded-sm px-5" type="text" placeholder="Enter Your Question(s) Here" />
+            <input className="h-10 w-1/6 bg-secondary hover:bg-secondaryLite text-white rounded-r-sm" type="submit" value="Ask Question" />
+          </form>
         </div>
       </div>
     </div>
