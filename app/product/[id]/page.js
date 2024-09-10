@@ -288,7 +288,7 @@ const page = ({ params }) => {
           <form className="w-full mx-auto my-5" action="">
             <input className="h-10 w-4/5 border rounded-sm px-5" type="text" placeholder="Enter Your Question(s) Here" />
             <input className="h-10 w-1/6 bg-secondary hover:bg-secondaryLite text-white rounded-r-sm" type="submit" value="Ask Question" />
-          </form>
+          </form>   
         </div>
       </div>
     </div>
