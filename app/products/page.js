@@ -2,6 +2,10 @@ import React from "react";
 import { TfiLayoutGrid3Alt } from "react-icons/tfi";
 import { VscThreeBars } from "react-icons/vsc";
 import { FaStar } from "react-icons/fa";
+import { BsArrowRepeat } from "react-icons/bs";
+import { FiShoppingCart } from "react-icons/fi";
+import { LuEye } from "react-icons/lu";
+import { CiHeart } from "react-icons/ci";
 
 const page = () => {
   const products = [
@@ -153,9 +157,47 @@ const page = () => {
         <div>
           <div className="grid grid-cols-1 md:grid-cols-4">
             {products.map(({ image, discountPrice, name, regularPrice }) => (
-              <div className="w-40">
+              <div className="w-40 border p-3 my-10 hover:shadow-lg hover:ease-out hover:duration-700">
                 <img className="size-36" src={image} alt="" />
-                <p className="font-semibold text-center hover:text-primaryLite">
+                <div>
+                  <hr />
+                  <div className="flex justify-around py-2">
+                    <FiShoppingCart className="hover:bg-primary hover:rounded-full hover:text-white text-2xl p-1" />
+                    <LuEye className="hover:bg-primary hover:rounded-full hover:text-white text-2xl p-1" />
+                    <CiHeart className="hover:bg-primary hover:rounded-full hover:text-white text-2xl p-1" />
+                    <BsArrowRepeat className="hover:bg-primary hover:rounded-full hover:text-white text-2xl p-1" />
+                  </div>
+
+                  <hr />
+                </div>
+                <p className="font-semibold text-center hover:text-primaryLite pb-2">
+                  {name}
+                </p>
+                <div className="flex gap-3 font-semibold">
+                  <p className="text-[#d4d4d4] line-through">
+                    ${regularPrice}.00
+                  </p>
+                  <p className="text-primaryLite">${discountPrice}.00</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4">
+            {products.map(({ image, discountPrice, name, regularPrice }) => (
+              <div className="w-40 border p-3 my-10 hover:shadow-lg hover:ease-out hover:duration-700">
+                <img className="size-36" src={image} alt="" />
+                <div>
+                  <hr />
+                  <div className="flex justify-around py-2">
+                    <FiShoppingCart className="hover:bg-primary hover:rounded-full hover:text-white text-2xl p-1" />
+                    <LuEye className="hover:bg-primary hover:rounded-full hover:text-white text-2xl p-1" />
+                    <CiHeart className="hover:bg-primary hover:rounded-full hover:text-white text-2xl p-1" />
+                    <BsArrowRepeat className="hover:bg-primary hover:rounded-full hover:text-white text-2xl p-1" />
+                  </div>
+
+                  <hr />
+                </div>
+                <p className="font-semibold text-center hover:text-primaryLite pb-2">
                   {name}
                 </p>
                 <div className="flex gap-3 font-semibold">
