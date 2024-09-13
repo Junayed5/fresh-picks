@@ -9,9 +9,15 @@ import {
 } from "react-icons/fa";
 import { BsTruck } from "react-icons/bs";
 import { GiWorld } from "react-icons/gi";
+import CartModal from "./cartModal";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [cartOpen, setOpen] = useState(false);
+
+  const toggleModal = () => {
+    setOpen(!cartOpen);
+  };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -72,9 +78,9 @@ export default function Navbar() {
               <a href="#" className="text-gray-700 hover:text-gray-900">
                 <FaHeart className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-700 hover:text-gray-900">
+              <button onClick={toggleModal} className="text-gray-700 hover:text-gray-900">
                 <FaShoppingCart className="h-6 w-6" />
-              </a>
+              </button>
             </div>
 
             {/* Mobile menu button */}
@@ -125,9 +131,9 @@ export default function Navbar() {
           <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
             Favorites
           </a>
-          <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
+          <button onClick={toggleModal} className="block py-2 px-4 text-sm hover:bg-gray-200" >
             Cart
-          </a>
+          </button>
         </div>
         <div className="hidden md:block">
           <div className="flex justify-between items-center max-w-7xl mx-auto">
@@ -155,6 +161,7 @@ export default function Navbar() {
             </button>
           </div>
         </div>
+        {cartOpen ? <CartModal toggleModal={toggleModal}/> : null}
       </nav>
     </>
   );
