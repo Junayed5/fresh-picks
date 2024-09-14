@@ -13,10 +13,7 @@ const CartModal = ({  toggleModal }) => {
             >
               &times;
             </button>
-            <h2 className="text-2xl font-semibold mb-4">
-              Right-Side Fullscreen Modal
-            </h2>
-            <p>This modal slides in from the right.</p>
+            <h3>This the cart section</h3>
           </div>
         </div>
       </div>
