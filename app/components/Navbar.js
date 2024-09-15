@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 import { BsTruck } from "react-icons/bs";
 import { GiWorld } from "react-icons/gi";
-import CartModal from "./cartModal";
+import CartModal from "./CartModal";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
