@@ -15,6 +15,9 @@ const CartModal = ({ toggleModal }) => {
       price: 200,
     },
   ];
+
+  const totalPrice = cartProducts.reduce((prev,current) => prev + current.price * current.quantity, 0);
+  console.log(totalPrice);
   return (
     <>
       <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-end z-50 ">
@@ -42,7 +45,7 @@ const CartModal = ({ toggleModal }) => {
                   <div className="flex items-end gap-2">
                     <p>{quantity}</p> x{" "}
                     <p className="text-primary font-semibold">
-                      ${price * quantity}.00
+                      ${price}.00
                     </p>
                   </div>
                   <button className="text-red-300 text-lg float-right hover:text-red-500">
@@ -53,9 +56,14 @@ const CartModal = ({ toggleModal }) => {
               </div>
             ))}
 
-            <div className="">
-              <button className="h-14 w-32 bg-primaryLite hover:bg-primary font-semibold text-white rounded-full">View cart</button>
-              <button className="h-14 w-32 bg-primaryLite hover:bg-primary font-semibold text-white rounded-full">Checkout</button>
+            <div className="flex justify-end my-8 mr-3">
+              <p className="font-semibold">Subtotal:-</p>
+              <p className="text-primary">${totalPrice}.00</p>
+            </div>
+
+            <div className="my-5 flex justify-center gap-x-5">
+              <button className="h-10 w-24 text-sm bg-primary hover:bg-primaryLite font-semibold text-white rounded-full">View cart</button>
+              <button className="h-10 w-24 text-sm bg-primary hover:bg-primaryLite font-semibold text-white rounded-full">Checkout</button>
             </div>
           </div>
         </div>
