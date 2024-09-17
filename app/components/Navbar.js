@@ -10,6 +10,7 @@ import {
 import { BsTruck } from "react-icons/bs";
 import { GiWorld } from "react-icons/gi";
 import CartModal from "./CartModal";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,9 +60,9 @@ export default function Navbar() {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <div className="flex items-center py-5 px-2">
-              <a href="#" className="flex items-center text-gray-700">
+              <Link href="/" className="flex items-center text-gray-700">
                 <img className="h-12 md:h-16" src="fresh-picks.png" alt="" />
-              </a>
+              </Link>
             </div>
 
             {/* Search Bar */}
@@ -109,12 +110,12 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         <div className={`md:hidden ${isOpen ? "block" : "hidden"}`}>
-          <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
+          <Link href="/" className="block py-2 px-4 text-sm hover:bg-gray-200">
             Home
-          </a>
-          <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
-            About
-          </a>
+          </Link>
+          <Link href="/products" className="block py-2 px-4 text-sm hover:bg-gray-200">
+            Products
+          </Link>
           <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
             Services
           </a>
@@ -142,12 +143,12 @@ export default function Navbar() {
             </button>
 
             <div>
-              <a href="#" className="py-2 px-4 text-lg hover:bg-gray-200">
+              <Link href="/" className="py-2 px-4 text-lg hover:bg-gray-200">
                 Home
-              </a>
-              <a href="#" className="py-2 px-4 text-lg hover:bg-gray-200">
-                About
-              </a>
+              </Link>
+              <Link href="/products" className="py-2 px-4 text-lg hover:bg-gray-200">
+                Products
+              </Link>
               <a href="#" className="py-2 px-4 text-lg hover:bg-gray-200">
                 Services
               </a>

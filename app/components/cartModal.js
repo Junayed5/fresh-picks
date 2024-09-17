@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const CartModal = ({ toggleModal }) => {
   const cartProducts = [
     {
@@ -16,7 +18,10 @@ const CartModal = ({ toggleModal }) => {
     },
   ];
 
-  const totalPrice = cartProducts.reduce((prev,current) => prev + current.price * current.quantity, 0);
+  const totalPrice = cartProducts.reduce(
+    (prev, current) => prev + current.price * current.quantity,
+    0
+  );
   console.log(totalPrice);
   return (
     <>
@@ -44,9 +49,7 @@ const CartModal = ({ toggleModal }) => {
 
                   <div className="flex items-end gap-2">
                     <p>{quantity}</p> x{" "}
-                    <p className="text-primary font-semibold">
-                      ${price}.00
-                    </p>
+                    <p className="text-primary font-semibold">${price}.00</p>
                   </div>
                   <button className="text-red-300 text-lg float-right hover:text-red-500">
                     &times;
@@ -62,8 +65,15 @@ const CartModal = ({ toggleModal }) => {
             </div>
 
             <div className="my-5 flex justify-center gap-x-5">
-              <button className="h-10 w-24 text-sm bg-primary hover:bg-primaryLite font-semibold text-white rounded-full">View cart</button>
-              <button className="h-10 w-24 text-sm bg-primary hover:bg-primaryLite font-semibold text-white rounded-full">Checkout</button>
+              <Link href={"/cart"}>
+                {" "}
+                <button onClick={toggleModal} className="h-10 w-24 text-sm bg-primary hover:bg-primaryLite font-semibold text-white rounded-full">
+                  View cart
+                </button>
+              </Link>
+              <button className="h-10 w-24 text-sm bg-primary hover:bg-primaryLite font-semibold text-white rounded-full">
+                Checkout
+              </button>
             </div>
           </div>
         </div>
