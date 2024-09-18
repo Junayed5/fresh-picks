@@ -22,7 +22,6 @@ const CartModal = ({ toggleModal }) => {
     (prev, current) => prev + current.price * current.quantity,
     0
   );
-  console.log(totalPrice);
   return (
     <>
       <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-end z-50 ">
@@ -60,7 +59,7 @@ const CartModal = ({ toggleModal }) => {
             ))}
 
             <div className="flex justify-end my-8 mr-3">
-              <p className="font-semibold">Subtotal:-</p>
+              <p className="font-semibold">Subtotal:</p>
               <p className="text-primary">${totalPrice}.00</p>
             </div>
 
