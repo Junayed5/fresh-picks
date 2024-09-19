@@ -16,13 +16,25 @@ const page = () => {
       quantity: 5,
       price: 200,
     },
+    {
+      image:
+        "https://demo.xpeedstudio.com/marketov2/grocery/wp-content/uploads/sites/12/2018/10/4-min.jpg",
+      name: "Tomato",
+      quantity: 5,
+      price: 200,
+    },
   ];
+  const tax = 5;
+  const totalPrice = cartProducts.reduce(
+    (prev, current) => prev + current.price * current.quantity,
+    0
+  );
   return (
     <div className="max-w-7xl mx-auto my-8">
       <h3 className="text-xl font-semibold ">Shopping Cart</h3>
 
       <div className="flex gap-5">
-        <div className="w-4/6 rounded-md shadow-2xl my-3 p-5">
+        <div className="w-4/6 h-fit rounded-md shadow-2xl my-3 p-5">
           <div className="flex justify-between text-lg font-semibold">
             <p>Product</p>
             <p>Price</p>
@@ -56,13 +68,29 @@ const page = () => {
           </div>
         </div>
 
-        <div className="w-2/6 rounded-md shadow-2xl my-3 p-5">
+        <div className="w-2/6 h-fit rounded-md shadow-2xl my-3 p-5">
           <h4 className="text-xl font-semibold">Order Summery</h4>
 
-          <div className="flex justify-between">
+          <div className="flex justify-between text-lg font-semibold my-5 text-primaryLite">
             <p>Subtotal</p>
-            <p>100</p>
+            <p>${totalPrice}.00</p>
           </div>
+          <div className="flex justify-between text-lg font-semibold my-5 text-primaryLite">
+            <p>Shipping</p>
+            <p>Free</p>
+          </div>
+          <div className="flex justify-between text-lg font-semibold my-5 text-primaryLite">
+            <p>Tax</p>
+            <p>${tax}.00</p>
+          </div>
+          <hr />
+          <div className="flex justify-between text-xl font-semibold my-5 text-primaryLite">
+            <p>Total</p>
+            <p>${totalPrice + tax}.00</p>
+          </div>
+          <button className="h-10 w-full bg-primary hover:bg-secondary text-white rounded-md">
+            Go To Checkout 
+          </button>
         </div>
       </div>
     </div>
