@@ -22,13 +22,13 @@ export default function Slider() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src="slider-image.jpg" alt="" />
+          <img className="w-full" src="https://demo.xpeedstudio.com/marketov2/grocery/wp-content/uploads/sites/12/revslider/grocery/banner1_img-min-1.jpg" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="slider-image.jpg" alt="" />
+          <img className="w-full" src="https://demo.xpeedstudio.com/marketov2/grocery/wp-content/uploads/sites/12/revslider/grocery/banner2_img-min-1.jpg" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="slider-image.jpg" alt="" />
+          <img className="w-full" src="https://demo.xpeedstudio.com/marketov2/grocery/wp-content/uploads/sites/12/revslider/grocery/banner3_img-min-1.jpg" alt="" />
         </SwiperSlide>
       </Swiper>
     </>

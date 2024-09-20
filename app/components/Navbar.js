@@ -1,16 +1,12 @@
 "use client";
 import { useState } from "react";
-import {
-  FaFacebookF,
-  FaHeart,
-  FaInstagram,
-  FaShoppingCart,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { PiShoppingCartLight } from "react-icons/pi";
 import { BsTruck } from "react-icons/bs";
 import { GiWorld } from "react-icons/gi";
 import CartModal from "./CartModal";
 import Link from "next/link";
+import { CiHeart } from "react-icons/ci";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -76,11 +72,17 @@ export default function Navbar() {
 
             {/* Icons */}
             <div className="hidden md:flex items-center space-x-6">
-              <a href="#" className="text-gray-700 hover:text-gray-900">
-                <FaHeart className="h-6 w-6" />
-              </a>
-              <button onClick={toggleModal} className="text-gray-700 hover:text-gray-900">
-                <FaShoppingCart className="h-6 w-6" />
+              <Link
+                href="/wishlist"
+                className="text-gray-700 hover:text-gray-900"
+              >
+                <CiHeart className="size-9" />
+              </Link>
+              <button
+                onClick={toggleModal}
+                className="text-gray-700 hover:text-gray-900"
+              >
+                <PiShoppingCartLight className="size-8" />
               </button>
             </div>
 
@@ -113,7 +115,10 @@ export default function Navbar() {
           <Link href="/" className="block py-2 px-4 text-sm hover:bg-gray-200">
             Home
           </Link>
-          <Link href="/products" className="block py-2 px-4 text-sm hover:bg-gray-200">
+          <Link
+            href="/products"
+            className="block py-2 px-4 text-sm hover:bg-gray-200"
+          >
             Products
           </Link>
           <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
@@ -129,10 +134,16 @@ export default function Navbar() {
               placeholder="Search products..."
             />
           </div>
-          <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
+          <Link
+            href="/wishlist"
+            className="block py-2 px-4 text-sm hover:bg-gray-200"
+          >
             Favorites
-          </a>
-          <button onClick={toggleModal} className="block py-2 px-4 text-sm hover:bg-gray-200" >
+          </Link>
+          <button
+            onClick={toggleModal}
+            className="block py-2 px-4 text-sm hover:bg-gray-200"
+          >
             Cart
           </button>
         </div>
@@ -146,7 +157,10 @@ export default function Navbar() {
               <Link href="/" className="py-2 px-4 text-lg hover:bg-gray-200">
                 Home
               </Link>
-              <Link href="/products" className="py-2 px-4 text-lg hover:bg-gray-200">
+              <Link
+                href="/products"
+                className="py-2 px-4 text-lg hover:bg-gray-200"
+              >
                 Products
               </Link>
               <a href="#" className="py-2 px-4 text-lg hover:bg-gray-200">
@@ -162,7 +176,7 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-        {cartOpen ? <CartModal toggleModal={toggleModal}/> : null}
+        {cartOpen ? <CartModal toggleModal={toggleModal} /> : null}
       </nav>
     </>
   );
