@@ -35,7 +35,7 @@ const page = () => {
 
       <div className="flex-none md:flex gap-5">
         <div className="w-full md:w-4/6 h-fit rounded-md shadow-2xl my-3 p-5">
-          <div className="flex justify-between text-lg font-semibold">
+          <div className="grid grid-cols-4 text-lg font-semibold pl-3">
             <p>Product</p>
             <p>Price</p>
             <p>Quantity</p>
@@ -45,8 +45,8 @@ const page = () => {
           <div>
             {cartProducts.map(({ image, name, price, quantity }) => (
               <>
-                <div className="flex items-center">
-                  <div className="flex-none md:flex gap-3 items-center ">
+                <div className=" grid grid-cols-4 items-center">
+                  <div className="flex-none md:flex gap-1 items-center ">
                     <img className="size-28" src={image} alt="image" />
                     <div>
                       <p className="text-lg font-semibold">{name}</p>
@@ -55,12 +55,11 @@ const page = () => {
                       </p>
                     </div>
                   </div>
+                  <p>${price}.00</p>
+                  <p>{quantity}</p>
+                  <p>${price * quantity}.00</p>
 
-                  <div className="flex gap-2 md:gap-56 ml-32">
-                    <p>${price}.00</p>
-                    <p>{quantity}</p>
-                    <p>${price * quantity}.00</p>
-                  </div>
+                  <div className=""></div>
                 </div>
                 <hr />
               </>
@@ -89,7 +88,7 @@ const page = () => {
             <p>${totalPrice + tax}.00</p>
           </div>
           <button className="h-10 w-full bg-primary hover:bg-secondary text-white rounded-md">
-            Go To Checkout 
+            Go To Checkout
           </button>
         </div>
       </div>
