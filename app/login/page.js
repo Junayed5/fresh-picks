@@ -5,6 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 
 const page = () => {
   const handleLogin = (e) => {
+    e.preventDefault();
     
   };
   return (
