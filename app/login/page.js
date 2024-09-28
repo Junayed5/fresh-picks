@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import LoginForm from "../components/form/LoginForm";
