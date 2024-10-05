@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FaFacebookF } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import LoginForm from "../components/form/LoginForm";
+import LoginButton from "../components/button/LoginButton";
 
 const page = () => {
   return (
@@ -17,10 +18,7 @@ const page = () => {
                 </p>
               </div>
               <div className="">
-                <button className="h-12 w-64 my-5 text-sm font-semibold bg-gray-100 hover:bg-gray-200 rounded-full text-gray-800 flex justify-center items-center gap-2">
-                  <FcGoogle />
-                  continue With Goggle
-                </button>
+                <LoginButton text={"Continue With Goggle"} icon={<FcGoogle/>}/>
                 <button className="h-12 w-64 my-5 text-sm font-semibold bg-gray-100 hover:bg-gray-200 rounded-full text-gray-800 flex justify-center items-center gap-2">
                   <FaFacebookF />
                   continue With Facebook
