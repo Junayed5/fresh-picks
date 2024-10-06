@@ -4,10 +4,20 @@ import React from "react";
 const { auth } = require("@/firebase/firebase.config");
 const { default: toast } = require("react-hot-toast");
 
-const provider = new GoogleAuthProvider();
+const goggleProvider = new GoogleAuthProvider();
+const fbProvider = new GoogleAuthProvider();
 
 const signInWithGoogle = () => {
-  signInWithPopup(auth, provider)
+  signInWithPopup(auth, goggleProvider)
+    .then((result) => {
+      if (result?.user) {
+        toast.success("Login Successful :)");
+      }
+    })
+    .catch((error) => toast.error(error?.message));
+};
+const signInWithFacebook = () => {
+  signInWithPopup(auth, fbProvider)
     .then((result) => {
       if (result?.user) {
         toast.success("Login Successful :)");
@@ -16,7 +26,7 @@ const signInWithGoogle = () => {
     .catch((error) => toast.error(error?.message));
 };
 
-const LoginButton = ({ text, icon }) => {
+export const LoginButton = ({ text, icon }) => {
   return (
     <button
       onClick={signInWithGoogle}
@@ -28,4 +38,14 @@ const LoginButton = ({ text, icon }) => {
   );
 };
 
-export default LoginButton;
+export const LoginFacebookButton = ({ text, icon }) => {
+  return (
+    <button
+      onClick={signInWithFacebook}
+      className="h-12 w-64 my-5 text-sm font-semibold bg-gray-100 hover:bg-gray-200 rounded-full text-gray-800 flex justify-center items-center gap-2"
+    >
+      {icon}
+      {text}
+    </button>
+  );
+};
