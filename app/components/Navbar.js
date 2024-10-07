@@ -7,10 +7,12 @@ import { GiWorld } from "react-icons/gi";
 import CartModal from "./CartModal";
 import Link from "next/link";
 import { CiHeart } from "react-icons/ci";
+import { auth } from "@/firebase/firebase.config";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [cartOpen, setOpen] = useState(false);
+  const [user, loading] = useAuthState(auth)
 
   const toggleModal = () => {
     setOpen(!cartOpen);

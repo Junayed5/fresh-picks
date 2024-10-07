@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FaFacebookF } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import RegisterForm from "../components/form/RegisterForm";
-import LoginButton, { LoginFacebookButton } from "../components/button/LoginButton";
+import  { LoginButton, LoginFacebookButton } from "../components/button/LoginButton";
 
 const page = () => {
   return (
