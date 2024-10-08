@@ -26,7 +26,7 @@ const signInWithFacebook = () => {
     .catch((error) => toast.error(error?.message));
 };
 
-export const LoginButton = ({ text, icon }) => {
+export const LoginGoggleButton = ({ text, icon }) => {
   return (
     <button
       onClick={signInWithGoogle}
