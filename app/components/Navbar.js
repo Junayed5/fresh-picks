@@ -8,11 +8,14 @@ import CartModal from "./CartModal";
 import Link from "next/link";
 import { CiHeart } from "react-icons/ci";
 import { auth } from "@/firebase/firebase.config";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [cartOpen, setOpen] = useState(false);
-  // const [user, loading] = useAuthState(auth)
+  const [user, loading,error] = useAuthState(auth);
+
+  console.log(error);
 
   const toggleModal = () => {
     setOpen(!cartOpen);
@@ -21,6 +24,9 @@ export default function Navbar() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  
+
   return (
     <>
       <div className="hidden md:block bg-primary">
@@ -49,7 +55,11 @@ export default function Navbar() {
           </div>
 
           <div>
-            <Link href={'/login'}>Login</Link>
+            {user?.email ? (
+              <button onClick={() => auth.signOut()}>Sign Out</button>
+            ) : (
+              <Link href={"/login"}>Login</Link>
+            )}
           </div>
         </div>
       </div>
