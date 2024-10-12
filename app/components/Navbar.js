@@ -15,7 +15,7 @@ export default function Navbar() {
   const [cartOpen, setOpen] = useState(false);
   const [user, loading,error] = useAuthState(auth);
 
-  console.log(error);
+  console.log(loading);
 
   const toggleModal = () => {
     setOpen(!cartOpen);
