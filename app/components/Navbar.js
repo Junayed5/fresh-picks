@@ -20,7 +20,7 @@ export default function Navbar() {
   const toggleModal = () => {
     setOpen(!cartOpen);
   };
-
+// comment
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
