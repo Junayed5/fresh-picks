@@ -1,11 +1,11 @@
 "use client";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { FacebookAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import React from "react";
 const { auth } = require("@/firebase/firebase.config");
 const { default: toast } = require("react-hot-toast");
 
 const goggleProvider = new GoogleAuthProvider();
-const fbProvider = new GoogleAuthProvider();
+const fbProvider = new FacebookAuthProvider();
 
 const signInWithGoogle = () => {
   signInWithPopup(auth, goggleProvider)
