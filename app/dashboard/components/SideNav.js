@@ -3,14 +3,14 @@ import React from "react";
 const SideNav = () => {
   return (
     <div className="flex">
-      <aside className="w-64 h-screen bg-gray-800">
+      <aside className="w-64 h-screen bg-white">
         <div className="px-6 py-8">
-          <h2 className="text-white text-xl font-semibold mb-4">Dashboard</h2>
+          <h2 className="text-gray-900 text-xl font-semibold mb-4">Dashboard</h2>
           <ul className="space-y-4">
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-base font-medium text-white rounded-lg hover:bg-gray-700"
+                className="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg hover:bg-white"
               >
                 <svg
                   className="w-6 h-6 text-gray-400"
@@ -26,7 +26,7 @@ const SideNav = () => {
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-base font-medium text-white rounded-lg hover:bg-gray-700"
+                className="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg hover:bg-white"
               >
                 <svg
                   className="w-6 h-6 text-gray-400"
@@ -42,7 +42,7 @@ const SideNav = () => {
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-base font-medium text-white rounded-lg hover:bg-gray-700"
+                className="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg hover:bg-white"
               >
                 <svg
                   className="w-6 h-6 text-gray-400"
@@ -58,7 +58,7 @@ const SideNav = () => {
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-base font-medium text-white rounded-lg hover:bg-gray-700"
+                className="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg hover:bg-white"
               >
                 <svg
                   className="w-6 h-6 text-gray-400"
