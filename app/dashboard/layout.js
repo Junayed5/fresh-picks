@@ -1,6 +1,8 @@
 "use client"
 import { useState } from "react";
 import { FaBars, FaHome, FaUser, FaCog } from "react-icons/fa";
+import { PiUsersThreeFill } from "react-icons/pi";
+import { AiFillProduct, AiOutlineProduct } from "react-icons/ai";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
@@ -32,28 +34,28 @@ export default function Sidebar() {
           </h1>
           <ul className="space-y-4 text-gray-700">
             <li className="flex items-center space-x-3">
-              <FaHome />
-              <span className={`${!isOpen && "hidden"} transition-all duration-300`}>Home</span>
+              <PiUsersThreeFill />
+              <span className={`${!isOpen && "hidden"} transition-all duration-300`}>Manage User</span>
             </li>
             <li className="flex items-center space-x-3">
-              <FaUser />
-              <span className={`${!isOpen && "hidden"} transition-all duration-300`}>Profile</span>
+              <AiFillProduct />
+              <span className={`${!isOpen && "hidden"} transition-all duration-300`}>Manage Products</span>
             </li>
             <li className="flex items-center space-x-3">
-              <FaCog />
-              <span className={`${!isOpen && "hidden"} transition-all duration-300`}>Settings</span>
+              <AiOutlineProduct />
+              <span className={`${!isOpen && "hidden"} transition-all duration-300`}>Add Products</span>
             </li>
           </ul>
         </div>
       </div>
 
-      {/* Main Content */}
+      {/* Main Content
       <div className={`flex-1 h-screen ml-${isOpen ? 64 : 20} p-8 bg-gray-100`}>
         <h2 className="text-3xl font-semibold text-gray-800">Main Content</h2>
         <p className="mt-4 text-gray-600">
           Welcome to your dashboard! Use the sidebar to navigate.
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }
